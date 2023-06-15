@@ -47,11 +47,13 @@ I tried to use the new model to train the Pokemon dataset(https://github.com/Hui
 I cut the image size all the way down to 96 because 256 is too slow.```ruby img_size = 96```
 
 The first time I set 1000 epochs, it didn't work very well, the second time I changed to 5000 epochs.```ruby max_epoch = 5000```
+
+This is not my code(https://github.com/HuiiJi/GAN_.py/blob/main/GAN_.py), I changed some Settings on the basis.
 ```ruby
     for iteration, (img, _) in tqdm(enumerate(dataloader)): # Iterate over the dataset
         real_img = img.to(device)
 
-        if iteration % 5 == 0: # Train discriminator 5 times, then train generator 1 time
+        if iteration % 1 == 0: # Train discriminator 5 times, then train generator 1 time
 
             optimize_d.zero_grad() # Clear discriminator gradients
 
@@ -74,7 +76,8 @@ The first time I set 1000 epochs, it didn't work very well, the second time I ch
 
             g_loss.backward() # Backpropagate generator loss
             optimize_g.step() # Update generator optimizer
-```            
+```
+I set Train discriminator 5 times, then train generator 1 time. ```ruby if iteration % 5 == 0:```
 ### 5.Key epochs
 epoch 7
 

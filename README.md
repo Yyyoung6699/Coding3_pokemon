@@ -67,3 +67,15 @@ epoch 1011
 epoch 2424
 
 ![2424](https://github.com/Yyyoung6699/Coding3_pokemon/blob/main/Processing/2424.png "2424")
+
+epoch 3024
+
+![3024](https://github.com/Yyyoung6699/Coding3_pokemon/blob/main/Processing/3024.png "3024")
+
+epoch 4385
+
+![4385](https://github.com/Yyyoung6699/Coding3_pokemon/blob/main/Processing/4385.png "4385")
+
+epoch 4826
+
+![4826](https://github.com/Yyyoung6699/Coding3_pokemon/blob/main/Processing/4826.png "4826")

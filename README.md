@@ -37,5 +37,7 @@ I downloaded the Anime-WGAN-GP (https://github.com/luzhixing12345/Anime-WGA). An
 ![WGAN](https://github.com/Yyyoung6699/Coding3_pokemon/raw/main/Nice%20images/WGAN.png "WGAN")
 ### 2.Train
 I put the Pokemon dataset into datasets and used the WGAN model it provided to train it, and it started well, but slowly. You can see the resulting image. 
+
 ![fail](https://github.com/Yyyoung6699/Coding3_pokemon/raw/main/Nice%20images/fail.png "fail")
+
 But for some reason, whenever we reach Generator iteration: 6499/40000, I get a RuntimeError: Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN  tensor and weight is a dense tensor. I looked for a solution(https://www.kaggle.com/questions-and-answers/256188), too, but it didn't work out. 

@@ -34,6 +34,7 @@ I am a big Pokemon fan, I love this dataset, I want to use this dataset to train
 ## What I did in this Project
 ### 1.Download and Test
 I downloaded the Anime-WGAN-GP (https://github.com/luzhixing12345/Anime-WGA). And a set of pictures were generated with the Pretrained model_WGAN_ANIME256 provided by it, which was very successful.
+
 ![WGAN](https://github.com/Yyyoung6699/Coding3_pokemon/raw/main/Nice%20images/WGAN.png "WGAN")
 ### 2.Train
 I put the Pokemon dataset into datasets and used the WGAN model it provided to train it, and it started well, but slowly. You can see the resulting image. 

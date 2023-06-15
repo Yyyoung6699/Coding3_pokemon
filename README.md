@@ -43,11 +43,39 @@ I put the Pokemon dataset into datasets and used the WGAN model it provided to t
 But for some reason, whenever we reach Generator iteration: 6499/40000, I get a RuntimeError: Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN  tensor and weight is a dense tensor. I looked for a solution(https://www.kaggle.com/questions-and-answers/256188), but it didn't work out. 
 ### 3.New model
 I tried to use the new model to train the Pokemon dataset(https://github.com/HuiiJi/GAN_.py/blob/main/GAN_.py).
-
+### 4.Setting
 I cut the image size all the way down to 96 because 256 is too slow.```ruby img_size = 96```
 
 The first time I set 1000 epochs, it didn't work very well, the second time I changed to 5000 epochs.```ruby max_epoch = 5000```
+```ruby
+    for iteration, (img, _) in tqdm(enumerate(dataloader)): # Iterate over the dataset
+        real_img = img.to(device)
 
+        if iteration % 5 == 0: # Train discriminator 5 times, then train generator 1 time
+
+            optimize_d.zero_grad() # Clear discriminator gradients
+
+            output = d_net(real_img) # Real data input to discriminator
+            d_real_loss = criterions(output, true_labels) # Discriminator loss for real images with label 1
+            fake_image = g_net(noises.detach()).detach() # Generate fake images using the generator
+            output = d_net(fake_image) # Fake data input to discriminator
+            d_fake_loss = criterions(output, fake_labels) # Discriminator loss for fake images with label 0
+            d_loss = (d_fake_loss + d_real_loss) / 2 # Combined discriminator loss
+
+            d_loss.backward() # Backpropagate discriminator loss
+            optimize_d.step() # Update discriminator optimizer
+
+        if iteration % 1 == 0:
+            optimize_g.zero_grad() # Clear generator gradients
+            noises.data.copy_(torch.randn(opt.batch_size, opt.noise_dim, 1, 1)) # Copy noise data for generator input
+            fake_image = g_net(noises) # Generate fake images
+            output = d_net(fake_image) # Fake data input to discriminator
+            g_loss = criterions(output, true_labels) # Generator loss, aiming to generate images classified as real
+
+            g_loss.backward() # Backpropagate generator loss
+            optimize_g.step() # Update generator optimizer
+            ```
+### 5.Key epochs
 epoch 7
 
 ![7](https://github.com/Yyyoung6699/Coding3_pokemon/blob/main/Processing/7.png "7")
@@ -63,10 +91,6 @@ epoch 493
 epoch 1011
 
 ![1011](https://github.com/Yyyoung6699/Coding3_pokemon/blob/main/Processing/1011.png "1011")
-
-epoch 2424
-
-![2424](https://github.com/Yyyoung6699/Coding3_pokemon/blob/main/Processing/2424.png "2424")
 
 epoch 3024
 

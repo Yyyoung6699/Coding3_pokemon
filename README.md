@@ -53,7 +53,7 @@ This is not my code(https://github.com/HuiiJi/GAN_.py/blob/main/GAN_.py), I chan
     for iteration, (img, _) in tqdm(enumerate(dataloader)): # Iterate over the dataset
         real_img = img.to(device)
 
-        if iteration % 1 == 0: # Train discriminator 5 times, then train generator 1 time
+        if iteration % 1 == 0:
 
             optimize_d.zero_grad() # Clear discriminator gradients
 
@@ -106,3 +106,47 @@ epoch 4385
 epoch 4826
 
 ![4826](https://github.com/Yyyoung6699/Coding3_pokemon/blob/main/Processing/4826.png "4826")
+### 6.Other code
+Generate Gif
+```ruby
+from PIL import Image
+import glob
+
+# GIF path
+image_path = r'D:\work\pythonProject1\FR\*.png'
+output_gif_path = r'D:\work\pythonProject1\animation.gif'
+
+# image list
+image_files = glob.glob(image_path)
+image_files.sort()  # 确保图像按照顺序加载
+
+image_sequence = []
+for image_file in image_files:
+    image = Image.open(image_file)
+    image_sequence.append(image)
+
+num_images = len(image_files)
+print(f"转换为 GIF 的图像数量: {num_images}")
+# save GIF
+image_sequence[0].save(output_gif_path, save_all=True, append_images=image_sequence[1:], optimize=False, duration=1, loop=0)
+print("GIF 动画生成成功！")
+```
+
+images processing
+
+Do some optimization on the generated images.
+```ruby
+import cv2
+import numpy as np
+
+image_path = r"C:\Users\zhand\Desktop\Nice images\4562.png"
+
+image = cv2.imread(image_path)
+
+kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])  # 锐化滤波器
+sharp_image = cv2.filter2D(image, -1, kernel)
+
+cv2.imshow("Enhanced Image", sharp_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```

@@ -1,4 +1,8 @@
 # POKEMON
+## DISPLAY
+### 1.Nice images
+![4562](https://github.com/Yyyoung6699/Coding3_pokemon/blob/main/Nice%20images/4562.png "4562")
+
 ## IDE
 I've been studying on a Jupyter notebook, but I find it inconvenient. I decided to use PyCharm to complete this assignment.
 
@@ -13,3 +17,4 @@ I am a big Pokemon fan, I love this dataset, I want to use this dataset to train
 ## What I did in this Project
 ### 1.Download and Test
 I downloaded the Anime-WGAN-GP (https://github.com/luzhixing12345/Anime-WGA). And a set of pictures were generated with the Pretrained model_WGAN_ANIME256 provided by it, which was very successful.
+### 2.Train

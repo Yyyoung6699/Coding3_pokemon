@@ -9,12 +9,13 @@
 ![4947](https://github.com/Yyyoung6699/Coding3_pokemon/raw/main/Nice%20images/4947.png "4947")
 ![4999](https://github.com/Yyyoung6699/Coding3_pokemon/raw/main/Nice%20images/4999.png "4999")
 ### 2.Processing gif
+step1
 ![step1](https://github.com/Yyyoung6699/Coding3_pokemon/raw/main/gif/step1.gif "step1")
 
-
+step2
 ![step2](https://github.com/Yyyoung6699/Coding3_pokemon/raw/main/gif/step2.gif "step2")
 
-
+step3
 ![step3](https://github.com/Yyyoung6699/Coding3_pokemon/raw/main/gif/step3.gif "step3")
 ## IDE
 I've been studying on a Jupyter notebook, but I find it inconvenient. I decided to use PyCharm to complete this assignment.

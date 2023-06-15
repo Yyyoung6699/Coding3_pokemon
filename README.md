@@ -74,7 +74,7 @@ The first time I set 1000 epochs, it didn't work very well, the second time I ch
 
             g_loss.backward() # Backpropagate generator loss
             optimize_g.step() # Update generator optimizer
-            ```
+```            
 ### 5.Key epochs
 epoch 7
 

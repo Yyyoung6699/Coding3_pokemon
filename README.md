@@ -40,4 +40,7 @@ I put the Pokemon dataset into datasets and used the WGAN model it provided to t
 
 ![fail](https://github.com/Yyyoung6699/Coding3_pokemon/raw/main/Nice%20images/fail.png "fail")
 
-But for some reason, whenever we reach Generator iteration: 6499/40000, I get a RuntimeError: Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN  tensor and weight is a dense tensor. I looked for a solution(https://www.kaggle.com/questions-and-answers/256188), too, but it didn't work out. 
+But for some reason, whenever we reach Generator iteration: 6499/40000, I get a RuntimeError: Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN  tensor and weight is a dense tensor. I looked for a solution(https://www.kaggle.com/questions-and-answers/256188), but it didn't work out. 
+### 3.New model
+I tried to use the new model to train the Pokemon dataset(https://github.com/HuiiJi/GAN_.py/blob/main/GAN_.py).
+I cut the image size all the way down to 96 because 256 is too slow.```ruby img_size = 96```

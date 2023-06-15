@@ -11,7 +11,9 @@
 ### 2.Processing gif
 ![step1](https://github.com/Yyyoung6699/Coding3_pokemon/raw/main/gif/step1.gif "step1")
 
+
 ![step2](https://github.com/Yyyoung6699/Coding3_pokemon/raw/main/gif/step2.gif "step2")
+
 
 ![step3](https://github.com/Yyyoung6699/Coding3_pokemon/raw/main/gif/step3.gif "step3")
 ## IDE

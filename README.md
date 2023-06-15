@@ -151,3 +151,5 @@ cv2.imshow("Enhanced Image", sharp_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
+## END
+This project has made me advance a lot in the field of machine learning. What I'm not happy with is that the Pokemon dataset is too small at 841 images, so the resulting images aren't as good as the animated avatars. Gans require a large number of data sets. I put the model here(https://github.com/Yyyoung6699/Coding3_pokemon/tree/main/pokemon). I hope that in the future my project will not only generate images, but even provide ideas for Pokemon design.

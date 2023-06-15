@@ -1,7 +1,7 @@
 # POKEMON
 ## DISPLAY
 ### 1.Nice images
-![4562](https://github.com/Yyyoung6699/Coding3_pokemon/blob/main/Nice%20images/4562.png "4562")
+![4562](https://github.com/Yyyoung6699/Coding3_pokemon/raw/main/Nice%20images/4562.png "4562")
 
 ## IDE
 I've been studying on a Jupyter notebook, but I find it inconvenient. I decided to use PyCharm to complete this assignment.

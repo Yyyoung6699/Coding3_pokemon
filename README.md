@@ -1,4 +1,6 @@
 # POKEMON
+Vedio Link: https://www.youtube.com/watch?v=1q0uxJoP6Gs
+Github Link: https://github.com/Yyyoung6699/Coding3_pokemon
 ## DISPLAY
 ### 1.Nice images
 ![4562](https://github.com/Yyyoung6699/Coding3_pokemon/raw/main/Nice%20images/4562.png "4562")
